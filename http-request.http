@@ -1,0 +1,11 @@
+### use @Query
+GET http://localhost:8080/color
+
+
+
+### use limit and SpEL
+GET http://localhost:8080/color_limited/velvet/2
+
+
+
+###

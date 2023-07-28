@@ -11,6 +11,7 @@ public interface ChinsRepository extends CrudRepository<ChinsEntity, Integer> {
 
     List<ChinsEntity> findChinsEntitiesByColorIsLike(String color, Limit limit);
 
+    // here the SpEL can't be used
     @Query("select * from chins where color like '%beige%'")
     List<ChinsEntity> someQuery();
 }
