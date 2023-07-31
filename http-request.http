@@ -1,3 +1,9 @@
+### all limited
+
+GET http://localhost:8080/all/7
+
+<> 2023-07-29T095157.200.json
+
 ### use @Query
 GET http://localhost:8080/color
 

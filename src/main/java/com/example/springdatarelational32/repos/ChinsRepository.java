@@ -9,6 +9,8 @@ import java.util.List;
 
 public interface ChinsRepository extends CrudRepository<ChinsEntity, Integer> {
 
+    List<ChinsEntity> findAllBy(Limit limit);
+
     List<ChinsEntity> findChinsEntitiesByColorIsLike(String color, Limit limit);
 
     // here the SpEL can't be used

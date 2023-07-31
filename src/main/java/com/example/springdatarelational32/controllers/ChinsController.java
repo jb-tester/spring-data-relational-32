@@ -30,4 +30,10 @@ public class ChinsController {
     public List<ChinsEntity> color() {
         return chinsRepository.someQuery();
     }
+
+    @GetMapping("/all/{limit:\\d}")
+    public List<ChinsEntity> allLimited(@PathVariable int limit) {
+        return chinsRepository.findAllBy(Limit.of(limit));
+    }
+
 }
