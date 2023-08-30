@@ -34,3 +34,16 @@ Note that expression results are used as table/column names.
 These are sanitized through a default SqlIdentifierSanitizer.words(), allowing characters and underscores to limit impact of unwanted SQL characters. A different sanitizer can be configured through RelationalMappingContext.
 
 **No support in IDEA actually**
+
+
+## Data Access and Transactions: JdbcClient support: [issue](https://github.com/spring-projects/spring-framework/issues/30931)
+
+The new JdbcClient provides a unified facade for query/update statements on top of JdbcTemplate and NamedParameterJdbcTemplate, with flexible parameter options as well as flexible result retrieval options
+
+```java
+Optional<Integer> value = client.sql("SELECT AGE FROM CUSTMR WHERE ID = :id")
+      .param("id", 3)
+      .query((rs, rowNum) -> rs.getInt(1))
+      .optional();
+```
+**No support in IDEA actually**
