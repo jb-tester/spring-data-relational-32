@@ -33,7 +33,7 @@ Expression evaluation leverages Spring Data’s EvaluationContextExtension mecha
 Note that expression results are used as table/column names. 
 These are sanitized through a default SqlIdentifierSanitizer.words(), allowing characters and underscores to limit impact of unwanted SQL characters. A different sanitizer can be configured through RelationalMappingContext.
 
-**No support in IDEA actually**
+**No support in IDEA actually**   https://youtrack.jetbrains.com/issue/IDEA-326747
 
 
 ## Data Access and Transactions: JdbcClient support: [issue](https://github.com/spring-projects/spring-framework/issues/30931)
@@ -46,4 +46,4 @@ Optional<Integer> value = client.sql("SELECT AGE FROM CUSTMR WHERE ID = :id")
       .query((rs, rowNum) -> rs.getInt(1))
       .optional();
 ```
-**No support in IDEA actually**
+**No support in IDEA actually** https://youtrack.jetbrains.com/issue/IDEA-331159
